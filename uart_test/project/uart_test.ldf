@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="uart_test" device="LCMXO3LF-6900C-5BG256C" default_implementation="impl1">
+    <Options/>
+    <Implementation title="impl1" dir="impl1" description="impl1" synthesis="lse" default_strategy="Strategy1">
+        <Options def_top="uart_test_top"/>
+        <Source name="../../hdl/uart_core_rx_module.vhd" type="VHDL" type_short="VHDL">
+            <Options/>
+        </Source>
+        <Source name="../../hdl/uart_core_tx_module.vhd" type="VHDL" type_short="VHDL">
+            <Options/>
+        </Source>
+        <Source name="../../hdl/uart_core_top.vhd" type="VHDL" type_short="VHDL">
+            <Options/>
+        </Source>
+        <Source name="../src/ip/pll/pll.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="../src/hdl/uart_test_top.vhd" type="VHDL" type_short="VHDL">
+            <Options top_module="uart_test_top"/>
+        </Source>
+        <Source name="../src/hdl/uart_test_tx_generator.vhd" type="VHDL" type_short="VHDL">
+            <Options/>
+        </Source>
+        <Source name="../src/constraints/uart_test.lpf" type="Logic Preference" type_short="LPF" excluded="TRUE">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="uart_test1.sty"/>
+</BaliProject>

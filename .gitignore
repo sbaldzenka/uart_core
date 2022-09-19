@@ -1,5 +1,15 @@
-uart_test/project/
-!uart_test/project/uart_test.ldf
+uart_test/project/impl1
+uart_test/project/uart_test_tcr.dir
+uart_test/project/*.tcl
+uart_test/project/*.ini
+uart_test/project/.recovery
+uart_test/project/*.xml
+uart_test/project/*.html
+uart_test/project/*.ccl
+uart_test/project/*.sty
+uart_test/project/*.lst
+uart_test/project/*.naf
+uart_test/project/*.sym
 
 uart_test/src/ip/pll/_math_real.vhd
 uart_test/src/ip/pll/*.tcl

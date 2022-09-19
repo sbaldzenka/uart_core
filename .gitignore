@@ -1,0 +1,13 @@
+uart_test/project/
+!uart_test/project/uart_test.ldf
+
+uart_test/src/ip/pll/_math_real.vhd
+uart_test/src/ip/pll/*.tcl
+uart_test/src/ip/pll/*.log
+uart_test/src/ip/pll/*.edn
+uart_test/src/ip/pll/*.jhd
+uart_test/src/ip/pll/*.naf
+uart_test/src/ip/pll/*.sort
+uart_test/src/ip/pll/*.srp
+uart_test/src/ip/pll/*.sym
+uart_test/src/ip/pll/pll_tmpl.vhd

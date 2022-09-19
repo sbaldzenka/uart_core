@@ -1,0 +1,35 @@
+BLOCK RESETPATHS ;
+BLOCK ASYNCPATHS ;
+BLOCK JTAGPATHS ;
+
+# system signals
+LOCATE COMP "system_clk"    SITE "C8";
+IOBUF PORT  "system_clk"    IO_TYPE=LVCMOS33 PULLMODE=NONE;
+
+LOCATE COMP "system_resetn" SITE "B3";
+IOBUF PORT  "system_resetn" IO_TYPE=LVCMOS33;
+
+# uart interface
+LOCATE COMP "uart_rx"       SITE "E3";
+IOBUF PORT  "uart_rx"       IO_TYPE=LVCMOS33;
+LOCATE COMP "uart_tx"       SITE "B1";
+IOBUF PORT  "uart_tx"       IO_TYPE=LVCMOS33 DRIVE=8;
+
+# leds
+#LOCATE COMP "o_led[0]" SITE "H11" ;
+#LOCATE COMP "o_led[1]" SITE "J13" ;
+#LOCATE COMP "o_led[2]" SITE "J11" ;
+#LOCATE COMP "o_led[3]" SITE "L12" ;
+#LOCATE COMP "o_led[4]" SITE "K11" ;
+#LOCATE COMP "o_led[5]" SITE "L13" ;
+#LOCATE COMP "o_led[6]" SITE "N15" ;
+#LOCATE COMP "o_led[7]" SITE "P16" ;
+#IOBUF PORT "o_led[7]" IO_TYPE=LVCMOS33 ;
+#IOBUF PORT "o_led[6]" IO_TYPE=LVCMOS33 ;
+#IOBUF PORT "o_led[5]" IO_TYPE=LVCMOS33 ;
+#IOBUF PORT "o_led[4]" IO_TYPE=LVCMOS33 ;
+#IOBUF PORT "o_led[3]" IO_TYPE=LVCMOS33 ;
+#IOBUF PORT "o_led[2]" IO_TYPE=LVCMOS33 ;
+#IOBUF PORT "o_led[1]" IO_TYPE=LVCMOS33 ;
+#IOBUF PORT "o_led[0]" IO_TYPE=LVCMOS33 ;
+

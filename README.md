@@ -6,6 +6,7 @@ Description of projects:
 - **hdl** - VHDL files.
 - **sim** - script files for modelsim/questasim.
 - **tb** - testbench.
+- **uart_test** - example project for Lattice MachXO3 Starter Kit.
 
 To set the UART baudrate, you must specify COEFF_BAUDRATE in the top project file.
 ### COEFF_BAUDRATE = aclk/baudrate.

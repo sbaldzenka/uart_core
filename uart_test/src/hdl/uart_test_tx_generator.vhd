@@ -1,4 +1,3 @@
-
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
@@ -11,6 +10,8 @@ port
     -- system signals
     clk_i        : in  std_logic;
     reset_i      : in  std_logic;
+    -- status signal
+    connect_i    : in  std_logic;
     -- axi-stream
     m_axis_valid : out std_logic;
     m_axis_data  : out std_logic_vector(7 downto 0);
@@ -28,24 +29,20 @@ architecture behavioral of uart_test_tx_generator is
         S_TX
     );
 
-    signal wait_counter : std_logic_vector(15 downto 0);
-    signal state        : states;
+    signal state : states;
 
 begin
 
     process(clk_i, reset_i)
     begin
         if (reset_i = '1') then
-            wait_counter <= (others => '0');
             m_axis_valid <= '0';
             m_axis_data  <= (others => '0');
             state        <= S_WAIT;
         elsif rising_edge(clk_i) then
             case state is
                 when S_WAIT =>
-                    wait_counter <= wait_counter + '1';
-
-                    if (wait_counter = x"FFFF") then
+                    if (connect_i = '1') then
                         state <= S_IDLE;
                     end if;
                 when S_IDLE =>

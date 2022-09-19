@@ -17,26 +17,26 @@ LOCATE COMP "uart_tx"       SITE "B1";
 IOBUF PORT  "uart_tx"       IO_TYPE=LVCMOS33 DRIVE=8;
 
 # leds ###################################################################
-#LOCATE COMP "led[0]"       SITE "H11";
-#IOBUF PORT  "led[0]"       IO_TYPE=LVCMOS33;
+LOCATE COMP "led[0]"        SITE "H11";
+IOBUF PORT  "led[0]"        IO_TYPE=LVCMOS33;
 
-#LOCATE COMP "led[1]"       SITE "J13";
-#IOBUF PORT  "led[1]"       IO_TYPE=LVCMOS33;
+LOCATE COMP "led[1]"        SITE "J13";
+IOBUF PORT  "led[1]"        IO_TYPE=LVCMOS33;
 
-#LOCATE COMP "led[2]"       SITE "J11";
-#IOBUF PORT  "led[2]"       IO_TYPE=LVCMOS33;
+LOCATE COMP "led[2]"        SITE "J11";
+IOBUF PORT  "led[2]"        IO_TYPE=LVCMOS33;
 
-#LOCATE COMP "led[3]"       SITE "L12";
-#IOBUF PORT  "led[3]"       IO_TYPE=LVCMOS33;
+LOCATE COMP "led[3]"        SITE "L12";
+IOBUF PORT  "led[3]"        IO_TYPE=LVCMOS33;
 
-#LOCATE COMP "led[4]"       SITE "K11";
-#IOBUF PORT  "led[4]"       IO_TYPE=LVCMOS33;
+LOCATE COMP "led[4]"        SITE "K11";
+IOBUF PORT  "led[4]"        IO_TYPE=LVCMOS33;
 
-#LOCATE COMP "led[5]"       SITE "L13";
-#IOBUF PORT  "led[5]"       IO_TYPE=LVCMOS33;
+LOCATE COMP "led[5]"        SITE "L13";
+IOBUF PORT  "led[5]"        IO_TYPE=LVCMOS33;
 
-#LOCATE COMP "led[6]"       SITE "N15";
-#IOBUF PORT  "led[6]"       IO_TYPE=LVCMOS33;
+LOCATE COMP "led[6]"        SITE "N15";
+IOBUF PORT  "led[6]"        IO_TYPE=LVCMOS33;
 
-#LOCATE COMP "led[7]"       SITE "P16";
-#IOBUF PORT  "led[7]"       IO_TYPE=LVCMOS33;
+LOCATE COMP "led[7]"        SITE "P16";
+IOBUF PORT  "led[7]"        IO_TYPE=LVCMOS33;

@@ -1,4 +1,3 @@
-
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
@@ -19,7 +18,9 @@ port
     system_resetn : in  std_logic;
     -- uart interface
     uart_rx       : in  std_logic;
-    uart_tx       : out std_logic
+    uart_tx       : out std_logic;
+    -- leds
+    led           : out std_logic_vector(7 downto 0)
 );
 end uart_test_top;
 
@@ -40,6 +41,8 @@ architecture behavioral of uart_test_top is
         -- system signals
         clk_i        : in  std_logic;
         reset_i      : in  std_logic;
+        -- status signal
+        connect_i    : in  std_logic;
         -- axi-stream
         m_axis_valid : out std_logic;
         m_axis_data  : out std_logic_vector(7 downto 0);
@@ -80,7 +83,24 @@ architecture behavioral of uart_test_top is
     signal m_axis_valid   : std_logic;
     signal m_axis_data    : std_logic_vector(7 downto 0);
 
+    signal connect        : std_logic;
+
 begin
+
+    reset <= (not resetn) or (not system_resetn);
+
+    process(clk_48mhz, reset)
+    begin
+        if (reset = '1') then
+            led     <= (others => '1');
+            connect <= '0';
+        elsif rising_edge(clk_48mhz) then
+            if (m_axis_valid = '1') then
+                connect <= '1';
+                led     <= not m_axis_data;
+            end if;
+        end if;
+    end process;
 
     pll_inst: pll
     port map
@@ -90,14 +110,14 @@ begin
         LOCK  => resetn
     );
 
-    reset <= (not resetn) or (not system_resetn);
-
     uart_test_tx_generator_inst: uart_test_tx_generator
     port map
     (
         -- system signals
         clk_i        => clk_48mhz,
         reset_i      => reset,
+        -- status signal
+        connect_i    => connect,
         -- axi-stream
         m_axis_valid => s_axis_valid,
         m_axis_data  => s_axis_data,

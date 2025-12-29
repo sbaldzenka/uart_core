@@ -1,3 +1,7 @@
+-- date  : 16.01.2020
+-- author: sbaldzenka
+-- e-mail: venera.electronica@gmail.com
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;

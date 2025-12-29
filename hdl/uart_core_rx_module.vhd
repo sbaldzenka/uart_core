@@ -1,5 +1,5 @@
 -------------------------------------------
--- data:   16.01.2020
+-- date  : 16.01.2020
 -- author: sbaldzenka
 -- e-mail: venera.electronica@gmail.com
 -- others: COEFF_BAUDRATE = Faclk/Fuart

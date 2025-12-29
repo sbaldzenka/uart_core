@@ -1,6 +1,6 @@
 # uart_core
 
-UART IP-Core for FPGA projects.
+VHDL UART IP-Core for FPGA projects.
 
 Description of projects:
 - **hdl** - VHDL files.
